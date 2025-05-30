@@ -15,6 +15,7 @@ echo "Running using packaged JRE:"
 set -ex
 exec "$JAVA_BIN"                    \
   -Dlogback.enableJansi="true"      \
+  -Djava.net.preferIPv4Stack=true   \
   -jar "$JAR_FILE"                  \
   "--config" "${PARAM_CONFIG_FILE}" \
   "--store" "${PARAM_STORE_DIR}"    \
