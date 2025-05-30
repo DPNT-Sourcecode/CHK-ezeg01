@@ -14,8 +14,8 @@ xattr -rd com.apple.quarantine "${SCRIPT_CURRENT_DIR}" >/dev/null 2>&1 || true
 echo "Running using packaged JRE:"
 set -ex
 exec "$JAVA_BIN"                    \
-  -Djava.net.preferIPv4Stack=true   \
   -Dlogback.enableJansi="true"      \
+  -Djava.net.preferIPv4Stack=true   \
   -jar "$JAR_FILE"                  \
   "--config" "${PARAM_CONFIG_FILE}" \
   "--store" "${PARAM_STORE_DIR}"    \
