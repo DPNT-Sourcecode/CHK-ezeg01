@@ -20,4 +20,3 @@ exec "$JAVA_BIN"                    \
   "--config" "${PARAM_CONFIG_FILE}" \
   "--store" "${PARAM_STORE_DIR}"    \
   "--sourcecode" "${PARAM_SOURCECODE_DIR}" "$@"
-
